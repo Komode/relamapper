@@ -7,7 +7,10 @@
     <groupId>stud</groupId>
     <artifactId>relamapper</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>registryservice</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>relamapper</name>
     <description>A social service for visualizing relations</description>
@@ -54,6 +57,12 @@
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-taglibs</artifactId>
+        </dependency>
+
+        <!-- service registration/discovery -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
         </dependency>
 
     </dependencies>
