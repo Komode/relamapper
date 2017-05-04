@@ -6,12 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="relamapper" />
+        <module name="serviceregistry" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="registryservice" target="1.8" />
       <module name="relamapper" target="1.8" />
+      <module name="serviceregistry" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
