@@ -1,0 +1,15 @@
+.middle-container {
+    width: auto;
+    max-width:1200px;
+    min-width:764px;
+}
+
+.login-box {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.login-box label {
+    width: 100px;
+}
