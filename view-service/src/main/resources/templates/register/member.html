@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>register member</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <h2>Register</h2>
+        <form th:replace="fragments :: form_register_member"></form>
+    </div>
+</div>
+</body>
+</html>

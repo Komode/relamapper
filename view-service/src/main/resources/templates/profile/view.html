@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>profile view</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <div class="profile-panel">
+            <h2>Profile view</h2>
+            <div class="profile-panel">
+                <div th:switch="${relation_established}">
+                    <span th:case="true">
+                        <span class="note_established">Relation established</span>
+                    </span>
+                    <span th:case="*">
+                        <a th:href="@{/relations/add/{uuid}(uuid=${viewing})}">Form relation</a>
+                    </span>
+                </div>
+                <hr />
+                <span class="span-label">Name</span>
+                <span class="span-value">
+                    <span th:text="${profile.firstname}"></span>
+                    <span th:text="${profile.middlename}"></span>
+                    <span th:text="${profile.lastname}"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

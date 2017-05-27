@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>relation edit</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <div class="profile-panel">
+            <h2>Add relation</h2>
+            <form method="post" th:action="@{/action/relation/edit}" role="form">
+                <input type="hidden" name="rel_id" th:value="${relation.rel_id}" />
+                <div class="form-group">
+                    <label for="uuid" class="form-label">UUID</label>
+                    <input type="text" class="form-input" id="uuid" name="uuid" th:value="${relation.with}" disabled="disabled" />
+                </div>
+                <div class="form-group">
+                    <label for="type" class="form-label">Type</label>
+                    <input type="text" class="form-input" id="type" name="type" th:value="${relation.type}" required="required" />
+                </div>
+                <input type="submit" class="btn btn-primary float-right" value="save" />
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

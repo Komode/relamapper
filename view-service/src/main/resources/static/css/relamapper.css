@@ -1,0 +1,33 @@
+.middle-container {
+    width: auto;
+    max-width:1200px;
+    min-width:764px;
+}
+
+.profile-panel {
+    width: auto;
+    max-width:500px;
+    min-width:200px;
+    margin: 0 auto;
+}
+
+.label-override {
+    min-width:150px;
+}
+
+input {
+    width: 100%;
+}
+
+.btn-fill-width {
+    width: 100%;
+}
+
+.span-label {
+    font-weight:bold;
+}
+
+.span-value {
+    color: #222;
+    font-size:1.05em;
+}

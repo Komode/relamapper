@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>relations</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <h2>relations</h2>
+        <table th:replace="fragments :: relations_table"></table>
+    </div>
+</div>
+</body>
+</html>

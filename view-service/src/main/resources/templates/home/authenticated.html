@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>authenticated</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <h2>relamapper</h2>
+        <p>Hi, you are authenticated as : <span th:text="${membername}"></span></p>
+    </div>
+</div>
+</body>
+</html>

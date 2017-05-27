@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: site_head">
+    <meta charset="UTF-8"/>
+    <title>profile edit</title>
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments :: menu_header"></div>
+    <div class="container middle-container">
+        <h2>Profile edit</h2>
+        <div class="profile-panel">
+            <h3>Account</h3>
+            <form method="post" class="form-horizontal" th:action="@{/action/set/email}" role="form">
+                <div class="form-group">
+                    <label for="email" class="form-label label-override">Email</label>
+                    <input type="email" class="form-input" id="email" name="email" th:value="${account.email}" required="required" />
+                    <input type="submit" class="btn btn-primary input-group-btn" value="Update email" />
+                </div>
+            </form>
+            <h3>Profile</h3>
+            <form method="post" class="form-horizontal" th:action="@{/action/update/profile}" role="form">
+                <div class="form-group">
+                    <label for="suid" class="form-label label-override">SUID</label>
+                    <input type="text" id="suid" name="suid" th:value="${profile.suid}" disabled="disabled" />
+                </div>
+                <div class="form-group">
+                    <label for="firstname" class="form-label label-override">First name</label>
+                    <input type="text" id="firstname" name="firstname" th:value="${profile.firstname}" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="form-label label-override">Last name</label>
+                    <input type="text" id="lastname" name="lastname" th:value="${profile.lastname}" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="middlename" class="form-label label-override">Middle name</label>
+                    <input type="text" id="middlename" name="middlename" th:value="${profile.middlename}" />
+                </div>
+                <input type="submit" class="btn btn-primary btn-fill-width" value="Update profile" />
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
